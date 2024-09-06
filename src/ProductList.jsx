@@ -277,11 +277,11 @@ const handleAddToCart = (plant) => {
         </div>
         {!showCart? (
         <div className="product-grid">
-            {plantsArray.length > 0 && plantsArray.map(plant => {
+            {plantsArray.length > 0 && plantsArray.map(eachCategory => {
                 return (<>
-                    <h3>{plant.category}</h3>
+                    <h1>{eachCategory.category}</h1>
                     <div className='product-list'>
-                        {plant.length > 0 && plant.map(p => {
+                        {eachCategory.plants.length > 0 && eachCategory.plants.map(p => {
                             return (<div className='product-card'>
                                 <div className='product-title'>{p.name}</div>
                                 <div className='product-image'>{p.image}</div>
