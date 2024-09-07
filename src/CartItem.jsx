@@ -9,7 +9,7 @@ const CartItem = ({ onContinueShopping }) => {
 
   // Calculate total amount for all products in the cart
   const calculateTotalAmount = () => {
-    const totalAmount = cart.reduce((accumulator, item) => item.cost + accumulator, 0);
+    return cart.reduce((accumulator, item) => item.cost + accumulator, 0);
   };
 
   const handleContinueShopping = (e) => {
